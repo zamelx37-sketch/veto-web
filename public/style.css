@@ -1,0 +1,201 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#050000;
+color:white;
+overflow:hidden;
+
+/* CENTER PAGE */
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+/* ===== MAIN ===== */
+
+.main{
+text-align:center;
+width:100%;
+margin-top:-15px; /* ✅ هبطناه شوية */
+padding-bottom:120px; /* بلاصة للfooter */
+}
+
+/* ===== TITLE ===== */
+
+.logo{
+font-size:80px;
+color:#ff1a1a;
+animation:logoPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse{
+from{
+text-shadow:0 0 20px red,0 0 50px red;
+}
+to{
+text-shadow:0 0 35px red,0 0 80px red;
+}
+}
+
+.subtitle{
+margin-top:15px;
+color:#bbb;
+font-size:18px;
+}
+
+/* ===== PANELS ===== */
+
+.cards{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:80px;
+margin-top:65px;
+flex-wrap:wrap;
+}
+
+.box{
+width:300px;
+padding:35px;
+border-radius:18px;
+border:1px solid #ff0000;
+background:rgba(20,0,0,0.65);
+position:relative;
+overflow:hidden;
+transition:0.35s;
+
+box-shadow:
+0 0 18px rgba(255,0,0,0.5),
+inset 0 0 18px rgba(255,0,0,0.2);
+}
+
+.box:hover{
+transform:scale(1.04);
+box-shadow:
+0 0 30px rgba(255,0,0,0.8),
+0 0 60px rgba(255,0,0,0.4),
+inset 0 0 25px rgba(255,0,0,0.4);
+}
+
+.box h3{
+margin-bottom:25px;
+font-size:22px;
+}
+
+/* ===== BUTTONS ===== */
+
+.box button{
+width:100%;
+margin:10px 0;
+padding:12px;
+background:rgba(0,0,0,0.4);
+border:1px solid red;
+color:white;
+border-radius:10px;
+cursor:pointer;
+transition:0.25s;
+font-size:15px;
+position:relative;
+overflow:hidden;
+}
+
+.box button::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,0,0,0.4),
+transparent
+);
+transition:0.45s;
+}
+
+.box button:hover::before{
+left:120%;
+}
+
+.box button:hover{
+transform:scale(1.04);
+box-shadow:0 0 15px rgba(255,0,0,0.7);
+}
+
+/* ===== PARTICLES ===== */
+
+#bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+position:fixed;
+bottom:28px;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
+z-index:5;
+}
+
+.footer-buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+}
+
+/* ORANGE CONTACT BUTTON */
+.contact-btn{
+padding:12px 28px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+font-weight:bold;
+color:white;
+background:#ff7a00;
+transition:0.3s;
+box-shadow:0 0 15px rgba(255,122,0,0.6);
+}
+
+.contact-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 30px #ff7a00;
+}
+
+/* DISCORD BUTTON */
+.discord-btn{
+padding:12px 28px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+font-weight:bold;
+color:white;
+background:#5865F2;
+transition:0.3s;
+box-shadow:0 0 15px rgba(88,101,242,0.7);
+}
+
+.discord-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px #5865F2;
+}
+
+.copyright{
+margin-top:12px;
+font-size:14px;
+color:#aaa;
+}
